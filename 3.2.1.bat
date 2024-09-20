@@ -31,10 +31,10 @@ echo 云端最新版本 !remote_version!
 timeout /t 2 > nul
 
 
-
-echo 正在下载最新脚本 (!remote_version!)...
-timeout /t 2 > nul
 set "remote_script=https://raw.githubusercontent.com/ImproveRei0/frpstartbat/refs/heads/main/!remote_version!.bat"
+echo 正在下载最新脚本 (!remote_script!)...
+timeout /t 2 > nul
+
 curl -s -o "!local_script!" "!remote_script!"
 if errorlevel 1 (
     echo 下载失败，请检查网络。
