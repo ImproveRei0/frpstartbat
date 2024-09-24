@@ -8,12 +8,12 @@ set "local_script=script.bat"
 echo 正在检查网络连接
 ping -n 1 8.8.8.8 > nul 2>&1
 if errorlevel 1 (
-    echo 网络连接失败，请检查网络设置。
+    echo 错误代码514
     pause
     exit /b
 )
 
-echo internet is ok
+echo 你的 internet 应该 ok
 timeout /t 2 > nul
 
 
@@ -22,7 +22,7 @@ for /f "delims=" %%i in ('curl -s "%version_file%"') do (
 )
 
 if not defined remote_version (
-    echo 未找到最新版本，退出。
+    echo 错误代码114
     pause
     exit /b
 )
@@ -43,9 +43,9 @@ if errorlevel 1 (
     echo 下载成功，文件已保存为 "!local_script!"。
 )
 
-
-timeout /t 2 > nul
-
 echo 下载完成，如果你能看见这个那太好了
+timeout /t 20 > nul
+
+
 
 exit /b
