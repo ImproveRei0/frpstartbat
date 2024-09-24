@@ -46,6 +46,6 @@ if errorlevel 1 (
 
 timeout /t 2 > nul
 
-echo 下载完成，正在执行最新的脚本...
-start "" cmd /c "!local_script!"
+echo 下载完成，如果你能看见这个那太好了
+
 exit /b
