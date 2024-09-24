@@ -2,7 +2,7 @@
 chcp 65001 > nul
 setlocal enabledelayedexpansion
 
-set "current_version=3.2.0"
+set "current_version=114.514.1919810"
 set "version_file=https://raw.githubusercontent.com/ImproveRei0/frpstartbat/refs/heads/main/version.txt"
 set "local_script=script.bat"  
 echo 正在检查网络连接
